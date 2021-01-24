@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unscientifically Scientific</title>
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1 {
+            text-align:center;
+        }
+        .buttons {
+            display: block;
+            padding:10px;
+            margin-left: auto;
+            margin-right: auto;
+            width:60px;
+        }
+        .comic {
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.webp" style="width:20%;">
+    <div class="buttons">
+    <button onclick="comic--;load()">&lt;</button>
+    <button onclick="comic++;load()">&gt;</button>
+    </div>
+    <h1 id="text">Comic 1</h1>
+    <div id="comic"></div>
+    <script>
+
+    comic=1;
+    function load(){
+    document.getElementById("comic").innerHTML=`<img src="${comic}.png"class="comic">`
+    document.getElementById("text").innerHTML="Comic "+comic
+    }
+    load()
+
+
+    </script>
+</body>
+</html>
